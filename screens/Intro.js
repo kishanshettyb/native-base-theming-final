@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { SafeAreaView, View, Text, StyleSheet, Image } from "react-native";
 import AppIntroSlider from "react-native-app-intro-slider";
 import * as Colors from "../styles/colors";
 
@@ -33,7 +33,7 @@ const slides = [
 export default class WelcomeScreen extends Component {
   _renderItem = ({ item }) => {
     return (
-      <View
+      <SafeAreaView
         style={{
           backgroundColor: item.backgroundColor,
           height: "100%",
@@ -42,7 +42,7 @@ export default class WelcomeScreen extends Component {
         <Image style={styles.centerImage} source={item.image} />
         <Text style={styles.title}>{item.title}</Text>
         <Text style={styles.text}>{item.text}</Text>
-      </View>
+      </SafeAreaView>
     );
   };
 

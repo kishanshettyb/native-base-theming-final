@@ -18,7 +18,7 @@ import Intro from "../screens/Intro";
 const AuthStack = createStackNavigator();
 const AuthStackScreen = () => {
   return (
-    <AuthStack.Navigator>
+    <AuthStack.Navigator headerMode="none">
       <AuthStack.Screen name="Intro" component={Intro} />
 
       <AuthStack.Screen
