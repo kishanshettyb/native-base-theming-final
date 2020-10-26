@@ -1,21 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import * as Font from "expo-font";
+import { Ionicons } from "@expo/vector-icons";
+import { Screens } from "./navigation/Screens";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+export default class App extends React.Component {
+  async componentDidMount() {
+    await Font.loadAsync({
+      Roboto: require("native-base/Fonts/Roboto.ttf"),
+      Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf"),
+      Poppins_medium: require("./assets/fonts/Poppins-Medium.ttf"),
+      Poppins_regular: require("./assets/fonts/Poppins-Regular.ttf"),
+      Poppins_semi_bold: require("./assets/fonts/Poppins-SemiBold.ttf"),
+      ...Ionicons.font,
+    });
+    this.setState({ isReady: true });
+  }
+
+  render() {
+    return <Screens />;
+  }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
