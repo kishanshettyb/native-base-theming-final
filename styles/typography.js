@@ -9,6 +9,12 @@ export const centerText = {
   alignItems: "center",
 };
 
+export const bodyText = {
+  color: Colors.gray,
+  fontSize: smallFontSize,
+  fontFamily: "Poppins_regular",
+};
+
 export const titleText = {
   color: Colors.primary,
   fontSize: mediumFontSize,
