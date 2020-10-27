@@ -10,11 +10,12 @@ import {
 } from "react-native";
 import { AuthContext } from "./Context";
 import { Spacing, Typography, Colors } from "../styles";
-import { Button, View, Text, Item, Input, Col } from "native-base";
+import { View, Text, Item, Input } from "native-base";
 import GradientButton from "react-native-gradient-buttons";
+import { ScrollView } from "react-native-gesture-handler";
 
 export default function SignIn({ navigation }) {
-  const { signUp } = React.useContext(AuthContext);
+  const { signIn } = React.useContext(AuthContext);
 
   return (
     <KeyboardAvoidingView
@@ -23,57 +24,59 @@ export default function SignIn({ navigation }) {
     >
       <SafeAreaView style={styles.container}>
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-          <View style={styles.inner}>
-            <Text style={styles.title}>Let's start with {"\n"}Login!</Text>
-            <Image
-              style={styles.image}
-              source={require("../assets/imgs/intro-1.jpg")}
-            />
-            <Item rounded style={styles.inputBox}>
-              <Input
-                placeholderTextColor={Colors.placeholder}
-                placeholder="Email"
+          <ScrollView>
+            <View style={styles.inner}>
+              <Text style={styles.title}>Let's start with {"\n"}Login!</Text>
+              <Image
+                style={styles.image}
+                source={require("../assets/imgs/intro-1.jpg")}
               />
-            </Item>
-            <Item rounded style={[styles.inputBox, styles.inputMargin]}>
-              <Input
-                secureTextEntry={true}
-                placeholderTextColor={Colors.placeholder}
-                placeholder="Password"
+              <Item rounded style={styles.inputBox}>
+                <Input
+                  placeholderTextColor={Colors.placeholder}
+                  placeholder="Email"
+                />
+              </Item>
+              <Item rounded style={[styles.inputBox, styles.inputMargin]}>
+                <Input
+                  secureTextEntry={true}
+                  placeholderTextColor={Colors.placeholder}
+                  placeholder="Password"
+                />
+              </Item>
+              <TouchableOpacity
+                onPress={() => navigation.navigate("ForgotPassword")}
+              >
+                <Text style={styles.lightText}>Forgot Password</Text>
+              </TouchableOpacity>
+              <GradientButton
+                style={styles.button}
+                text="Login"
+                textStyle={{ fontSize: 14, fontFamily: "Poppins_semi_bold" }}
+                gradientBegin={Colors.primary}
+                gradientEnd={Colors.secondary}
+                gradientDirection="diagonal"
+                height={60}
+                width="100%"
+                radius={16}
+                impact
+                impactStyle="Light"
+                onPressAction={() => signIn()}
               />
-            </Item>
-            <TouchableOpacity
-              onPress={() => navigation.navigate("ForgotPassword")}
-            >
-              <Text style={styles.lightText}>Forgot Password</Text>
-            </TouchableOpacity>
-            <GradientButton
-              style={styles.button}
-              text="Login"
-              textStyle={{ fontSize: 14, fontFamily: "Poppins_semi_bold" }}
-              gradientBegin={Colors.primary}
-              gradientEnd={Colors.secondary}
-              gradientDirection="diagonal"
-              height={60}
-              width="100%"
-              radius={16}
-              impact
-              impactStyle="Light"
-              onPressAction={() => alert("You pressed me!")}
-            />
-            <View style={styles.textCenter}>
-              <Text style={styles.footerTitle}>
-                Don't have an Account ?
-                <Text
-                  onPress={() => navigation.navigate("SignUp")}
-                  style={[styles.footerTitle, styles.link]}
-                >
-                  {" "}
-                  Sign Up
+              <View style={styles.textCenter}>
+                <Text style={styles.footerTitle}>
+                  Don't have an Account?
+                  <Text
+                    onPress={() => navigation.navigate("SignUp")}
+                    style={[styles.footerTitle, styles.link]}
+                  >
+                    {" "}
+                    Sign Up
+                  </Text>
                 </Text>
-              </Text>
+              </View>
             </View>
-          </View>
+          </ScrollView>
         </TouchableWithoutFeedback>
       </SafeAreaView>
     </KeyboardAvoidingView>
@@ -103,7 +106,7 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 196,
     resizeMode: "contain",
-    marginBottom: 58,
+    marginBottom: 30,
   },
   link: {
     color: Colors.primary,
@@ -129,7 +132,6 @@ const styles = StyleSheet.create({
   },
   button: {
     marginTop: 25,
-    marginBottom: 0,
-    paddingBottom: 0,
+    marginBottom: 10,
   },
 });
