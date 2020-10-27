@@ -14,6 +14,7 @@ import ProfileDetails from "../screens/ProfileDetails";
 import HomeDetails from "../screens/HomeDetails";
 import Splash from "../screens/Splash";
 import Intro from "../screens/Intro";
+import ForgotPassword from "../screens/ForgotPassword";
 
 const AuthStack = createStackNavigator();
 const AuthStackScreen = () => {
@@ -31,6 +32,7 @@ const AuthStackScreen = () => {
         component={SignUp}
         options={{ title: "Sign Up" }}
       />
+      <AuthStack.Screen name="ForgotPassword" component={ForgotPassword} />
     </AuthStack.Navigator>
   );
 };

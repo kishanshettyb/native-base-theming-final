@@ -9,5 +9,5 @@ export const error = "#FF3636";
 export const success = "#18ce0f";
 export const warning = "#FFB236";
 
-export const input = "#F0F0F0";
-export const placeholder = "#F7F7F7";
+export const input = "#F7F7F7";
+export const placeholder = "#909090";
