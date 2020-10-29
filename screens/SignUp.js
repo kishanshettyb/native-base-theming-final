@@ -126,6 +126,7 @@ const styles = StyleSheet.create({
     borderRadius: 14,
     paddingLeft: 22,
     height: 56,
+    marginLeft: 0,
   },
   inputMargin: {
     marginTop: 30,
@@ -133,9 +134,10 @@ const styles = StyleSheet.create({
   button: {
     marginTop: 50,
     marginBottom: 10,
+    marginLeft: 0,
   },
   headerButton: {
-    marginLeft: 20,
+    marginLeft: 15,
   },
   textCenter: {
     ...Typography.centerText,

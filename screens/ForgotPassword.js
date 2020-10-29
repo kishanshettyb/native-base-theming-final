@@ -100,6 +100,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.input,
     borderRadius: 14,
     paddingLeft: 22,
+    marginLeft: 0,
     height: 56,
     marginBottom: 25,
   },
@@ -108,6 +109,9 @@ const styles = StyleSheet.create({
     marginBottom: 50,
   },
   headerButton: {
-    marginLeft: 20,
+    marginLeft: 15,
+  },
+  button: {
+    marginLeft: 0,
   },
 });

@@ -21,7 +21,6 @@ const AuthStackScreen = () => {
   return (
     <AuthStack.Navigator headerMode="none">
       <AuthStack.Screen name="Intro" component={Intro} />
-
       <AuthStack.Screen
         name="SignIn"
         component={SignIn}

@@ -131,6 +131,7 @@ const styles = StyleSheet.create({
     borderRadius: 14,
     paddingLeft: 22,
     height: 56,
+    marginLeft: 0,
   },
   inputMargin: {
     marginBottom: 25,
@@ -139,5 +140,6 @@ const styles = StyleSheet.create({
   button: {
     marginTop: 25,
     marginBottom: 10,
+    marginLeft: 0,
   },
 });

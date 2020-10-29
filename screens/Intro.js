@@ -39,13 +39,20 @@ export default class WelcomeScreen extends Component {
           height: "100%",
         }}
       >
-        <Image style={styles.centerImage} source={item.image} />
-        <Text style={styles.title}>{item.title}</Text>
-        <Text style={styles.text}>{item.text}</Text>
+        <View style={styles.centerContent}>
+          <Image style={styles.centerImage} source={item.image} />
+          <Text style={styles.title}>{item.title}</Text>
+          <Text style={styles.text}>{item.text}</Text>
+        </View>
       </SafeAreaView>
     );
   };
-
+  _onSkip = () => {
+    // User finished the introduction. Show real app through
+    // navigation or simply by controlling state
+    // this.setState({ showRealApp: true });
+    this.props.navigation.navigate("SignIn");
+  };
   _onDone = () => {
     // User finished the introduction. Show real app through
     // navigation or simply by controlling state
@@ -61,6 +68,7 @@ export default class WelcomeScreen extends Component {
           dotStyle={styles.dots}
           activeDotStyle={styles.activeDot}
           onDone={this._onDone}
+          onSkip={this._onSkip}
           skipLabel={<Text style={styles.skipBtn}>Skip</Text>}
           nextLabel={<Text style={styles.nextBtn}>Next</Text>}
           doneLabel={<Text style={styles.nextBtn}>Sign Up</Text>}
@@ -98,7 +106,6 @@ const styles = StyleSheet.create({
     height: 150,
     resizeMode: "contain",
     alignItems: "center",
-    marginTop: 100,
     justifyContent: "center",
   },
   dots: {
@@ -116,5 +123,10 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: Colors.primary,
     fontFamily: "Poppins_semi_bold",
+  },
+  centerContent: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
