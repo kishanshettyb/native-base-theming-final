@@ -13,6 +13,7 @@ import { Spacing, Typography, Colors } from "../styles";
 import { View, Text, Item, Input } from "native-base";
 import GradientButton from "react-native-gradient-buttons";
 import { ScrollView } from "react-native-gesture-handler";
+import { StatusBar } from "expo-status-bar";
 
 export default function SignIn({ navigation }) {
   const { signIn } = React.useContext(AuthContext);
@@ -25,6 +26,11 @@ export default function SignIn({ navigation }) {
       <SafeAreaView style={styles.container}>
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
           <ScrollView>
+            <StatusBar
+              backgroundColor={Colors.white}
+              barStyle="light-content"
+            />
+
             <View style={styles.inner}>
               <Text style={styles.title}>Let's start with {"\n"}Login!</Text>
               <Image
@@ -125,6 +131,7 @@ const styles = StyleSheet.create({
     borderRadius: 14,
     paddingLeft: 22,
     height: 56,
+    marginLeft: 0,
   },
   inputMargin: {
     marginBottom: 25,
@@ -133,5 +140,6 @@ const styles = StyleSheet.create({
   button: {
     marginTop: 25,
     marginBottom: 10,
+    marginLeft: 0,
   },
 });
