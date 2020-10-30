@@ -2,6 +2,7 @@ import * as Colors from "./colors";
 
 export const smallFontSize = 12;
 export const baseFontSize = 15;
+export const normalFontSize = 18;
 export const mediumFontSize = 20;
 
 export const centerText = {
@@ -10,7 +11,7 @@ export const centerText = {
 };
 
 export const bodyText = {
-  color: Colors.gray,
+  color: Colors.grayLight,
   fontSize: smallFontSize,
   fontFamily: "Poppins_regular",
 };
@@ -20,14 +21,15 @@ export const titleText = {
   fontSize: mediumFontSize,
   fontFamily: "Poppins_semi_bold",
 };
-export const subTitleText = {
-  color: Colors.gray,
-  fontSize: smallFontSize,
-  fontFamily: "Poppins_regular",
-};
 
 export const screenFooter = {
   color: Colors.black,
   fontSize: baseFontSize,
+  fontFamily: "Poppins_semi_bold",
+};
+
+export const title = {
+  color: Colors.black,
+  fontSize: normalFontSize,
   fontFamily: "Poppins_semi_bold",
 };

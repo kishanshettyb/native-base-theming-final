@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
     marginTop: 50,
   },
   lightText: {
-    ...Typography.subTitleText,
+    ...Typography.bodyText,
     textAlign: "right",
   },
   inputBox: {

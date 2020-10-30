@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
     marginLeft: 30,
     marginRight: 30,
     textAlign: "center",
-    color: "#000",
+    color: Colors.grayLight,
   },
   centerImage: {
     width: "100%",

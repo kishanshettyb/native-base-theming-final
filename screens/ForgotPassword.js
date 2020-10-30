@@ -38,7 +38,7 @@ export default function ForgotPassword({ navigation }) {
               gradientDirection="diagonal"
               height={40}
               width={40}
-              radius={16}
+              radius={12}
               impact
               impactStyle="Light"
               onPressAction={() => navigation.navigate("SignIn")}

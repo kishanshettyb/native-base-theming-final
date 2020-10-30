@@ -39,8 +39,14 @@ const AuthStackScreen = () => {
 const HomeStack = createStackNavigator();
 const HomeStackScreen = () => {
   return (
-    <HomeStack.Navigator>
-      <HomeStack.Screen name="Home" component={Home} />
+    <HomeStack.Navigator headerMode="none">
+      <HomeStack.Screen
+        name="Home"
+        component={Home}
+        options={{
+          headerTitle: "",
+        }}
+      />
       <HomeStack.Screen name="HomeDetails" component={HomeDetails} />
     </HomeStack.Navigator>
   );
