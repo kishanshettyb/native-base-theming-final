@@ -18,7 +18,15 @@ import PopularCources from "../components/PopularCources";
 import GradientButton from "react-native-gradient-buttons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import FeaturedCourses from "../components/FeaturedCourses";
-import { Text, StyleSheet, Image, Platform, ScrollView } from "react-native";
+import {
+  Text,
+  StyleSheet,
+  Image,
+  Platform,
+  ScrollView,
+  View,
+} from "react-native";
+import Categories from "../components/Categories";
 
 export default function Home({ navigation }) {
   return (
@@ -89,11 +97,15 @@ export default function Home({ navigation }) {
             </Col>
           </Grid>
           <MyCarousel />
-          <Heading
-            heading="Popular Cources"
-            btn="View All"
-            link="HomeDetails"
-          />
+          <Heading heading="Categories" btn="View All" link="HomeDetails" />
+          <Categories />
+          <View style={{ marginTop: -30 }}>
+            <Heading
+              heading="Popular Cources"
+              btn="View All"
+              link="HomeDetails"
+            />
+          </View>
           <PopularCources />
           <Heading
             heading="Featured Cources"
