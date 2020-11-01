@@ -1,6 +1,6 @@
 import React from "react";
-import { View, Text, StyleSheet, Button } from "react-native";
 import { AuthContext } from "./Context";
+import { View, Text, StyleSheet, Button } from "react-native";
 
 export default function Profile({ navigation }) {
   const { signOut } = React.useContext(AuthContext);

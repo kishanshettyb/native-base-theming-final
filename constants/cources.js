@@ -1,0 +1,60 @@
+export default [
+  {
+    title:
+      "Society has put up so many boundariesSociety has put up so many boundariesSociety has put up so many boundaries",
+    image: require("../assets/imgs/img-1.jpg"),
+    subtitle: "Black Jacket",
+    cta: "View article",
+    price: "200",
+    discountPrice: "200",
+  },
+  {
+    title: "Many limitations on what’s right",
+    image: require("../assets/imgs/img-2.jpg"),
+    subtitle: "Black Jacket",
+    cta: "View article",
+    price: "200",
+    discountPrice: "200",
+  },
+  {
+    title: "Why would anyone pick blue over?",
+    image: require("../assets/imgs/profile.jpg"),
+    subtitle: "Black Jacket",
+    cta: "View article",
+    price: "200",
+    discountPrice: "200",
+  },
+  {
+    title: "Pink is obviously a better color",
+    image: require("../assets/imgs/profile.jpg"),
+    subtitle: "Black Jacket",
+    cta: "View article",
+    price: "200",
+    discountPrice: "200",
+  },
+  {
+    title: "The time is now for it to be okay to be",
+    image: require("../assets/imgs/profile.jpg"),
+    subtitle: "Black Jacket",
+
+    cta: "View article",
+    price: "200",
+    discountPrice: "200",
+  },
+  {
+    title: "$377",
+    image: require("../assets/imgs/profile.jpg"),
+    subtitle: "Black Jacket",
+    cta: "View article",
+    price: "200",
+    discountPrice: "200",
+  },
+  {
+    title: "$299",
+    image: require("../assets/imgs/profile.jpg"),
+    subtitle: "Saint Laurent",
+    price: "200",
+    discountPrice: "200",
+    cta: "View article",
+  },
+];

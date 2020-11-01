@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { SafeAreaView, View, Text, StyleSheet, Image } from "react-native";
-import AppIntroSlider from "react-native-app-intro-slider";
 import * as Colors from "../styles/colors";
+import AppIntroSlider from "react-native-app-intro-slider";
+import { SafeAreaView, View, Text, StyleSheet, Image } from "react-native";
 
 const slides = [
   {
@@ -34,10 +34,7 @@ export default class WelcomeScreen extends Component {
   _renderItem = ({ item }) => {
     return (
       <SafeAreaView
-        style={{
-          backgroundColor: item.backgroundColor,
-          height: "100%",
-        }}
+        style={{ backgroundColor: item.backgroundColor, height: "100%" }}
       >
         <View style={styles.centerContent}>
           <Image style={styles.centerImage} source={item.image} />
@@ -48,9 +45,6 @@ export default class WelcomeScreen extends Component {
     );
   };
   _onSkip = () => {
-    // User finished the introduction. Show real app through
-    // navigation or simply by controlling state
-    // this.setState({ showRealApp: true });
     this.props.navigation.navigate("SignIn");
   };
   _onDone = () => {
@@ -80,6 +74,19 @@ export default class WelcomeScreen extends Component {
 }
 
 const styles = StyleSheet.create({
+  centerContent: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+
+  centerImage: {
+    width: "100%",
+    height: 150,
+    resizeMode: "contain",
+    alignItems: "center",
+    justifyContent: "center",
+  },
   title: {
     fontSize: 20,
     fontFamily: "Poppins_semi_bold",
@@ -99,14 +106,7 @@ const styles = StyleSheet.create({
     marginLeft: 30,
     marginRight: 30,
     textAlign: "center",
-    color: "#000",
-  },
-  centerImage: {
-    width: "100%",
-    height: 150,
-    resizeMode: "contain",
-    alignItems: "center",
-    justifyContent: "center",
+    color: Colors.grayLight,
   },
   dots: {
     backgroundColor: "#ddd",
@@ -123,10 +123,5 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: Colors.primary,
     fontFamily: "Poppins_semi_bold",
-  },
-  centerContent: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
   },
 });
