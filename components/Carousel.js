@@ -124,9 +124,6 @@ export default class MyCarousel extends React.Component {
             itemWidth={300}
             renderItem={this._renderItem}
             onSnapToItem={(index) => this.setState({ activeIndex: index })}
-            autoplay={true}
-            autoplayDelay={5000}
-            autoplayInterval={5000}
           />
         </View>
       </SafeAreaView>

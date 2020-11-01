@@ -14,11 +14,21 @@ import { Feather } from "@expo/vector-icons";
 import MyCarousel from "../components/Carousel";
 import { Col, Grid } from "react-native-easy-grid";
 import { Colors, Typography, Spacing } from "../styles";
-import PopularCources from "../components/PopularCources";
+import PopularCourses from "../components/PopularCourses";
 import GradientButton from "react-native-gradient-buttons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import FeaturedCourses from "../components/FeaturedCourses";
-import { Text, StyleSheet, Image, Platform, ScrollView } from "react-native";
+import {
+  Text,
+  StyleSheet,
+  Image,
+  Platform,
+  ScrollView,
+  ImageBackground,
+  View,
+} from "react-native";
+import Categories from "../components/Categories";
+import { LinearGradient } from "expo-linear-gradient";
 
 export default function Home({ navigation }) {
   return (
@@ -89,14 +99,18 @@ export default function Home({ navigation }) {
             </Col>
           </Grid>
           <MyCarousel />
+          <Heading heading="Categories" btn="View All" link="HomeDetails" />
+          <Categories />
+          <View style={{ marginTop: -30 }}>
+            <Heading
+              heading="Popular Courses"
+              btn="View All"
+              link="HomeDetails"
+            />
+          </View>
+          <PopularCourses />
           <Heading
-            heading="Popular Cources"
-            btn="View All"
-            link="HomeDetails"
-          />
-          <PopularCources />
-          <Heading
-            heading="Featured Cources"
+            heading="Featured Courses"
             btn="View All"
             link="HomeDetails"
           />
