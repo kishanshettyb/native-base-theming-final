@@ -9,7 +9,7 @@ const cards = [
   {
     id: 1,
     title: "Marketting",
-    subTitle: "60 Cources",
+    subTitle: "60 Courses",
     image: require("../assets/imgs/cat-1.png"),
     color1: "#A84BEA",
     color2: "#9918F6",
@@ -17,7 +17,7 @@ const cards = [
   {
     id: 2,
     title: "Finance",
-    subTitle: "40 Cources",
+    subTitle: "40 Courses",
     image: require("../assets/imgs/cat-2.png"),
     color1: "#4136F1",
     color2: "#5F56EB",
@@ -25,7 +25,7 @@ const cards = [
   {
     id: 3,
     title: "Web Designing",
-    subTitle: "20 Cources",
+    subTitle: "20 Courses",
     image: require("../assets/imgs/cat-3.png"),
     color1: "#4136F1",
     color2: "#5F56EB",
@@ -33,7 +33,7 @@ const cards = [
   {
     id: 4,
     title: "UI & UX",
-    subTitle: "20 Cources",
+    subTitle: "20 Courses",
     image: require("../assets/imgs/cat-4.png"),
     color1: "#A84BEA",
     color2: "#9918F6",
