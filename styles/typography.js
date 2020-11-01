@@ -27,9 +27,19 @@ export const screenFooter = {
   fontSize: baseFontSize,
   fontFamily: "Poppins_semi_bold",
 };
+export const smallTitle = {
+  color: Colors.black,
+  fontSize: smallFontSize,
+  fontFamily: "Poppins_semi_bold",
+};
 
 export const title = {
   color: Colors.black,
   fontSize: normalFontSize,
   fontFamily: "Poppins_semi_bold",
+};
+export const titleBoldSmall = {
+  color: Colors.black,
+  fontSize: smallFontSize,
+  fontFamily: "Poppins_bold",
 };

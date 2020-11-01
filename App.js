@@ -11,6 +11,7 @@ export default class App extends React.Component {
       Poppins_medium: require("./assets/fonts/Poppins-Medium.ttf"),
       Poppins_regular: require("./assets/fonts/Poppins-Regular.ttf"),
       Poppins_semi_bold: require("./assets/fonts/Poppins-SemiBold.ttf"),
+      Poppins_bold: require("./assets/fonts/Poppins-Bold.ttf"),
       ...Ionicons.font,
     });
     this.setState({ isReady: true });

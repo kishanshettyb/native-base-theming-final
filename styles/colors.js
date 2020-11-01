@@ -1,7 +1,7 @@
 export const black = "#000";
 export const white = "#fff";
-export const gray = "#A3A3A3";
 
+export const grayThin = "#F1F1F1";
 export const grayLight = "#999999";
 export const grayDark = "#656565";
 
