@@ -1,11 +1,12 @@
 import React from "react";
-import { Text, StyleSheet, Image, FlatList } from "react-native";
 import { View } from "native-base";
-import data from "../constants/cources";
-import { LinearGradient } from "expo-linear-gradient";
-import { Spacing, Typography, Colors } from "../styles";
+import data from "../constants/featured";
+import { Typography, Colors } from "../styles";
 import { FontAwesome } from "@expo/vector-icons";
+import { Grid, Col } from "react-native-easy-grid";
 import { MaterialIcons } from "@expo/vector-icons";
+import { Text, StyleSheet, Image, FlatList } from "react-native";
+
 export default function FeaturedCourses() {
   return (
     <FlatList
@@ -22,24 +23,38 @@ export default function FeaturedCourses() {
           <Text numberOfLines={1} ellipsizeMode="tail" style={styles.subTitle}>
             {item.subtitle}
           </Text>
-          <Text style={styles.ratingText}>
-            4.5{""}{" "}
-            <MaterialIcons name="star" size={12} color={Colors.warning} />
-            <MaterialIcons name="star" size={12} color={Colors.warning} />
-            <MaterialIcons name="star" size={12} color={Colors.warning} />
-            <MaterialIcons name="star" size={12} color={Colors.warning} />
-            <MaterialIcons name="star-half" size={12} color={Colors.warning} />
-          </Text>
-          <Text style={{ marginTop: 10 }}>
-            <Text style={styles.price}>
-              <FontAwesome name="dollar" size={15} color="black" /> {item.price}{" "}
-            </Text>{" "}
-            <Text style={styles.discountPrice}>
-              {" "}
-              <FontAwesome name="dollar" size={15} color={Colors.gray} />
-              {item.price}
-            </Text>
-          </Text>
+          <Grid style={{ alignSelf: "flex-start" }}>
+            <Col style={{ width: 30 }}>
+              <Text style={styles.ratingText}>4.5</Text>
+            </Col>
+            <Col>
+              <Text style={styles.icons}>
+                <MaterialIcons name="star" size={12} color={Colors.warning} />
+                <MaterialIcons name="star" size={12} color={Colors.warning} />
+                <MaterialIcons name="star" size={12} color={Colors.warning} />
+                <MaterialIcons name="star" size={12} color={Colors.warning} />
+                <MaterialIcons
+                  name="star-half"
+                  size={12}
+                  color={Colors.warning}
+                />
+              </Text>
+            </Col>
+          </Grid>
+          <Grid style={{ alignSelf: "flex-start" }}>
+            <Col size={1}>
+              <Text style={styles.price}>
+                <FontAwesome name="dollar" size={15} color="black" />{" "}
+                {item.price}
+              </Text>
+            </Col>
+            <Col size={3}>
+              <Text style={styles.discountPrice}>
+                <FontAwesome name="dollar" size={12} color={Colors.gray} />{" "}
+                {item.price}
+              </Text>
+            </Col>
+          </Grid>
         </View>
       )}
     />
@@ -58,33 +73,34 @@ const styles = StyleSheet.create({
     width: 200,
     marginRight: 20,
   },
-  linearGradient: {
-    position: "absolute",
-    width: "100%",
-    height: "100%",
-  },
-  imageConatiner: {
-    margin: Spacing.sectionPadding,
-    position: "relative",
+  icons: {
+    paddingTop: 7,
+    alignSelf: "flex-start",
   },
   title: {
     ...Typography.screenFooter,
-    marginBottom: 10,
+    marginBottom: 5,
   },
   price: {
     ...Typography.screenFooter,
+    alignSelf: "flex-start",
   },
   discountPrice: {
-    ...Typography.screenFooter,
+    ...Typography.bodyText,
     color: Colors.grayLight,
     fontFamily: "Poppins_semi_bold",
     textDecorationLine: "line-through",
+    alignSelf: "flex-start",
+    justifyContent: "center",
+    alignItems: "center",
+    paddingTop: 2,
   },
   subTitle: {
     ...Typography.bodyText,
   },
   ratingText: {
-    paddingTop: 10,
+    paddingTop: 5,
+    paddingBottom: 5,
     ...Typography.titleBoldSmall,
     color: Colors.warning,
   },

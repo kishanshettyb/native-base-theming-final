@@ -1,5 +1,4 @@
 import React from "react";
-import { Text, StyleSheet, Image, Platform, ScrollView } from "react-native";
 import {
   Header,
   Left,
@@ -9,36 +8,17 @@ import {
   Input,
   Item,
 } from "native-base";
-import GradientButton from "react-native-gradient-buttons";
-import { Colors, Typography, Spacing } from "../styles";
+import Heading from "../components/Heading";
 import { StatusBar } from "expo-status-bar";
 import { Feather } from "@expo/vector-icons";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { Col, Grid } from "react-native-easy-grid";
 import MyCarousel from "../components/Carousel";
-import Heading from "../components/Heading";
+import { Col, Grid } from "react-native-easy-grid";
+import { Colors, Typography, Spacing } from "../styles";
 import PopularCources from "../components/PopularCources";
+import GradientButton from "react-native-gradient-buttons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 import FeaturedCourses from "../components/FeaturedCourses";
-
-const data = [
-  {
-    uri:
-      "https://stimg.cardekho.com/images/carexteriorimages/360x240/Ferrari/Ferrari-Portofino/047.jpg",
-    imageSize: {
-      margin: 200,
-    },
-  },
-  {
-    uri: "https://rollr.io/wp-content/uploads/2017/02/mini-home-car.jpg",
-  },
-  {
-    uri:
-      "https://stimg.cardekho.com/images/carexteriorimages/360x240/Ferrari/Ferrari-Portofino/047.jpg",
-  },
-  {
-    uri: "https://rollr.io/wp-content/uploads/2017/02/mini-home-car.jpg",
-  },
-];
+import { Text, StyleSheet, Image, Platform, ScrollView } from "react-native";
 
 export default function Home({ navigation }) {
   return (
@@ -120,13 +100,7 @@ export default function Home({ navigation }) {
             btn="View All"
             link="HomeDetails"
           />
-
           <FeaturedCourses />
-          <Heading
-            heading="Popular Cources"
-            btn="View All"
-            link="HomeDetails"
-          />
         </Content>
       </ScrollView>
     </Container>

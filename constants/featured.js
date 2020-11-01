@@ -2,7 +2,7 @@ export default [
   {
     title:
       "Society has put up so many boundariesSociety has put up so many boundariesSociety has put up so many boundaries",
-    image: require("../assets/imgs/img-1.jpg"),
+    image: require("../assets/imgs/img-3.jpg"),
     subtitle: "Black Jacket",
     cta: "View article",
     price: "200",
@@ -10,7 +10,7 @@ export default [
   },
   {
     title: "Many limitations on what’s right",
-    image: require("../assets/imgs/img-2.jpg"),
+    image: require("../assets/imgs/img-4.jpg"),
     subtitle: "Black Jacket",
     cta: "View article",
     price: "200",

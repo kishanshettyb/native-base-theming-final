@@ -11,10 +11,10 @@ export default function Heading(props) {
 
   return (
     <Grid style={styles.heading}>
-      <Col size={8}>
+      <Col size={7}>
         <Text style={styles.title}>{props.heading}</Text>
       </Col>
-      <Col size={2}>
+      <Col size={3}>
         <TouchableOpacity onPress={() => navigation.navigate(props.link)}>
           <Text style={[styles.title, styles.link]}>{props.btn}</Text>
         </TouchableOpacity>
@@ -35,5 +35,5 @@ const styles = StyleSheet.create({
     ...Typography.bodyText,
     color: Colors.grayDark,
   },
-  link: { color: Colors.primary },
+  link: { color: Colors.primary, alignSelf: "flex-end" },
 });

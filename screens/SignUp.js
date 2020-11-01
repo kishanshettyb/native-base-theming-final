@@ -1,9 +1,4 @@
 import React from "react";
-import { AuthContext } from "./Context";
-import { Colors, Typography, Spacing } from "../styles";
-import { Text, View, Item, Input, Header, Left, Body } from "native-base";
-import GradientButton from "react-native-gradient-buttons";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
 import {
   SafeAreaView,
   TouchableWithoutFeedback,
@@ -11,7 +6,12 @@ import {
   Keyboard,
   KeyboardAvoidingView,
 } from "react-native";
+import { AuthContext } from "./Context";
 import { StatusBar } from "expo-status-bar";
+import { Colors, Typography, Spacing } from "../styles";
+import GradientButton from "react-native-gradient-buttons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { Text, View, Item, Input, Header, Left, Body } from "native-base";
 
 export default function SignUp({ navigation }) {
   const { signUp } = React.useContext(AuthContext);
@@ -49,7 +49,6 @@ export default function SignUp({ navigation }) {
             <Body />
           </Header>
           <StatusBar backgroundColor={Colors.white} barStyle="light-content" />
-
           <View style={styles.inner}>
             <Text style={styles.title}>Let’s start with {"\n"}Register !</Text>
             <Item rounded style={styles.inputBox}>

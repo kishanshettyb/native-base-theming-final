@@ -9,11 +9,11 @@ import {
   Keyboard,
 } from "react-native";
 import { AuthContext } from "./Context";
-import { Spacing, Typography, Colors } from "../styles";
-import { View, Text, Item, Input } from "native-base";
-import GradientButton from "react-native-gradient-buttons";
-import { ScrollView } from "react-native-gesture-handler";
 import { StatusBar } from "expo-status-bar";
+import { View, Text, Item, Input } from "native-base";
+import { Spacing, Typography, Colors } from "../styles";
+import { ScrollView } from "react-native-gesture-handler";
+import GradientButton from "react-native-gradient-buttons";
 
 export default function SignIn({ navigation }) {
   const { signIn } = React.useContext(AuthContext);
@@ -30,7 +30,6 @@ export default function SignIn({ navigation }) {
               backgroundColor={Colors.white}
               barStyle="light-content"
             />
-
             <View style={styles.inner}>
               <Text style={styles.title}>Let's start with {"\n"}Login!</Text>
               <Image
