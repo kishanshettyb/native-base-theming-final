@@ -2,13 +2,12 @@ import React from "react";
 import { AuthContext } from "./Context";
 import { View, Text, StyleSheet, Button } from "react-native";
 
-export default function ProfileDetails({ navigation }) {
+export default function Search({ navigation }) {
   const { signOut } = React.useContext(AuthContext);
 
   return (
     <View style={styles.container}>
-      <Text>Profile Details Screen</Text>
-      <Button title="SignOut" onPress={() => signOut()} />
+      <Text>Search Screen</Text>
     </View>
   );
 }

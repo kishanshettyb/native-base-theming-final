@@ -1,5 +1,13 @@
 import React from "react";
 import {
+  Text,
+  StyleSheet,
+  Image,
+  Platform,
+  ScrollView,
+  View,
+} from "react-native";
+import {
   Header,
   Left,
   Right,
@@ -18,17 +26,8 @@ import PopularCourses from "../components/PopularCourses";
 import GradientButton from "react-native-gradient-buttons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import FeaturedCourses from "../components/FeaturedCourses";
-import {
-  Text,
-  StyleSheet,
-  Image,
-  Platform,
-  ScrollView,
-  ImageBackground,
-  View,
-} from "react-native";
+
 import Categories from "../components/Categories";
-import { LinearGradient } from "expo-linear-gradient";
 
 export default function Home({ navigation }) {
   return (

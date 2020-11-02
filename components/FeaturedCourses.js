@@ -1,5 +1,6 @@
 import React from "react";
 import { View } from "native-base";
+
 import data from "../constants/featured";
 import { Typography, Colors } from "../styles";
 import { FontAwesome } from "@expo/vector-icons";
