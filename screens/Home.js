@@ -20,14 +20,14 @@ import Heading from "../components/Heading";
 import { StatusBar } from "expo-status-bar";
 import { Feather } from "@expo/vector-icons";
 import MyCarousel from "../components/Carousel";
+import Categories from "../components/Categories";
 import { Col, Grid } from "react-native-easy-grid";
 import { Colors, Typography, Spacing } from "../styles";
 import PopularCourses from "../components/PopularCourses";
 import GradientButton from "react-native-gradient-buttons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import FeaturedCourses from "../components/FeaturedCourses";
-
-import Categories from "../components/Categories";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 export default function Home({ navigation }) {
   return (
@@ -50,10 +50,12 @@ export default function Home({ navigation }) {
           />
         </Left>
         <Right>
-          <Image
-            source={require("../assets/imgs/profile.jpg")}
-            style={styles.profile}
-          />
+          <TouchableOpacity onPress={() => navigation.navigate("Profile")}>
+            <Image
+              source={require("../assets/imgs/profile.jpg")}
+              style={styles.profile}
+            />
+          </TouchableOpacity>
         </Right>
       </Header>
       <StatusBar backgroundColor={Colors.white} barStyle="dark-content" />
