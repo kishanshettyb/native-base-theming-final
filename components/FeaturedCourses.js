@@ -26,7 +26,7 @@ export default function FeaturedCourses() {
           </Text>
           <Grid style={{ alignSelf: "flex-start" }}>
             <Col style={{ width: 30 }}>
-              <Text style={styles.ratingText}>4.5</Text>
+              <Text style={styles.ratingText}>{item.review}</Text>
             </Col>
             <Col>
               <Text style={styles.icons}>
@@ -46,7 +46,7 @@ export default function FeaturedCourses() {
             <Col size={1}>
               <Text style={styles.price}>
                 <FontAwesome name="dollar" size={15} color="black" />{" "}
-                {item.price}
+                {item.discountPrice}
               </Text>
             </Col>
             <Col size={3}>

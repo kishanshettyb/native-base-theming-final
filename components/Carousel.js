@@ -40,7 +40,7 @@ export default class MyCarousel extends React.Component {
         style={{
           backgroundColor: Colors.primary,
           borderRadius: 5,
-          height: 250,
+          height: 375,
           padding: 50,
           borderRadius: 20,
         }}
@@ -55,7 +55,11 @@ export default class MyCarousel extends React.Component {
     return (
       <SafeAreaView style={{ flex: 1, paddingTop: 50 }}>
         <View
-          style={{ flex: 1, flexDirection: "row", justifyContent: "center" }}
+          style={{
+            flex: 1,
+            flexDirection: "row",
+            justifyContent: "center",
+          }}
         >
           <Carousel
             ref={(c) => {
