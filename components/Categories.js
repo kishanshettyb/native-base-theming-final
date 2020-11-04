@@ -62,7 +62,13 @@ export default function Categories() {
                       style={[styles.cardRight, styles.card]}
                       key={cards[index].id}
                     >
-                      <Text style={styles.title}>{cards[index].title}</Text>
+                      <Text
+                        numberOfLines={2}
+                        ellipsizeMode="tail"
+                        style={styles.title}
+                      >
+                        {cards[index].title}
+                      </Text>
                       <Text style={styles.subTitle}>
                         {cards[index].subTitle}
                       </Text>
@@ -146,6 +152,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: 25,
     left: 25,
+    width: "80%",
   },
   subTitle: {
     ...Typography.bodyText,
