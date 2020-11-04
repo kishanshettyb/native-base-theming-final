@@ -116,7 +116,6 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.29,
     shadowRadius: 7.65,
-    elevation: 7,
   },
   cardRight: {
     backgroundColor: "transparent",
