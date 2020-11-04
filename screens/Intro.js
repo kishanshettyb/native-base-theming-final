@@ -17,7 +17,7 @@ const slides = [
     title: "Social Marketing",
     text:
       "Detailed client reviews of the leading social media marketing agencies and consultants.",
-    image: require("../assets/imgs/intro-1.jpg"),
+    image: require("../assets/imgs/img-11.jpg"),
     backgroundColor: "#fff",
   },
   {
@@ -25,7 +25,7 @@ const slides = [
     title: "SEO Optimization",
     text:
       "We don't work just for profit as other SEO Companies, rather we take pride in our values.",
-    image: require("../assets/imgs/intro-1.jpg"),
+    image: require("../assets/imgs/seo.png"),
     backgroundColor: "#fff",
   },
 ];
