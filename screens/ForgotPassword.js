@@ -1,18 +1,10 @@
 import React from "react";
-
-import { AuthContext } from "./Context";
+import { StatusBar } from "expo-status-bar";
 import { Colors, Typography, Spacing } from "../styles";
-import { Text, View, Item, Input, Header, Left, Body } from "native-base";
 import GradientButton from "react-native-gradient-buttons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import {
-  SafeAreaView,
-  TouchableWithoutFeedback,
-  StyleSheet,
-  Keyboard,
-  KeyboardAvoidingView,
-} from "react-native";
-import { StatusBar } from "expo-status-bar";
+import { Text, View, Item, Input, Header, Left, Body } from "native-base";
+import { SafeAreaView, StyleSheet, KeyboardAvoidingView } from "react-native";
 
 export default function ForgotPassword({ navigation }) {
   return (
