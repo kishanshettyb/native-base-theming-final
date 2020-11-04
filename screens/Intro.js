@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
 
   centerImage: {
     width: "100%",
-    height: 150,
+    height: 200,
     resizeMode: "contain",
     alignItems: "center",
     justifyContent: "center",
