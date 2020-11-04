@@ -116,6 +116,11 @@ export default function Home({ navigation }) {
             link="HomeDetails"
           />
           <FeaturedCourses />
+          <Heading
+            heading="Featured Courses"
+            btn="View All"
+            link="HomeDetails"
+          />
         </Content>
       </ScrollView>
     </Container>
