@@ -22,7 +22,7 @@ export default function PopularCourses() {
       renderItem={({ item }) => (
         <View style={styles.imageConatiner}>
           <ImageBackground
-            source={require("../assets/imgs/img-1.jpg")}
+            source={item.image}
             style={styles.imgBackground}
             imageStyle={{ borderRadius: 20 }}
           >
@@ -34,8 +34,10 @@ export default function PopularCourses() {
               ]}
               style={styles.linearGradient}
             >
-              <Text style={styles.title}>Web Designing</Text>
-              <Text style={styles.subTitle}>Web Designing</Text>
+              <Text numberOfLines={2} ellipsizeMode="tail" style={styles.title}>
+                {item.title}
+              </Text>
+              <Text style={styles.subTitle}>{item.subTitle}</Text>
             </LinearGradient>
           </ImageBackground>
         </View>
@@ -62,6 +64,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     bottom: 55,
     left: 30,
+    width: "80%",
   },
   subTitle: {
     ...Typography.bodyText,
